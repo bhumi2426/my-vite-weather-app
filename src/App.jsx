@@ -29,7 +29,7 @@ export default function App() {
     e.preventDefault();
     setLoading(true); //start loading
     
-    const apiKey = "fbe4e2f3e6abad56d7a325005a697477";
+    const apiKey = import.meta.env.VITE_API_KEY;
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
     try {
